@@ -1,15 +1,27 @@
-import "@/app/globals.css"
-import { Inter } from "next/font/google"
+import "@/app/globals.css";
+import { Inter } from "next/font/google";
+import { ThemeProvider } from "@components/theme-provider";
 
-import { ThemeProvider } from "@/components/theme-provider"
-
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "TJF CONSTRUCCIONES - Constructora en Córdoba Capital",
-  description: "Proyectos integrales de arquitectura, obras en general y mantenimientos en Córdoba Capital, Argentina.",
+  description:
+    "Proyectos integrales de arquitectura, obras en general y mantenimientos en Córdoba Capital, Argentina.",
+  icons: {
+    icon: "/logo-tjf.png", // tu logo como favicon
+  },
+  other: {
+    // JSON-LD para que Google identifique tu logo de marca
+    "application/ld+json": JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "url": "https://www.tjfconstrucciones.com",
+      "logo": "https://www.tjfconstrucciones.com/logo-tjf.png",
+    }),
+  },
     generator: 'v0.app'
-}
+};
 
 export default function RootLayout({ children }) {
   return (
@@ -20,5 +32,5 @@ export default function RootLayout({ children }) {
         </ThemeProvider>
       </body>
     </html>
-  )
+  );
 }
