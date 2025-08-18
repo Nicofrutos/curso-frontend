@@ -6,10 +6,15 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "TJF CONSTRUCCIONES - Constructora en Córdoba Capital",
-  description: "Proyectos integrales de arquitectura, obras en general y mantenimientos en Córdoba Capital, Argentina.",
+  title: "TJF Construcciones",
+  description: "Diseñamos y ejecutamos proyectos de construcción",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.png",
+  },
     generator: 'v0.app'
-}
+};
 
 export default function RootLayout({ children }) {
   return (
